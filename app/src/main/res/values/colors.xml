@@ -12,5 +12,6 @@
     <color name="light_gray">#a2a2a2</color>
     <color name="back_ground">#f2f3f5</color>
     <color name="highlight_text_color">#2196F3</color>
+    <color name="dark_grey">#556080</color>
 
 </resources>

@@ -3,12 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary"
     tools:context=".ui.home.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home fragment" />
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content">
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp" android:src="@drawable/ic_menu"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp" android:src="@drawable/ic_search"/>
+            <ImageView
+                android:background="@color/dark_grey"
+                android:layout_width="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="40dp" android:src="@drawable/ic_profile"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>
