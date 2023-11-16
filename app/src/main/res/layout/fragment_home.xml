@@ -39,8 +39,25 @@
         android:layout_width="match_parent"
         android:minHeight="200dp"
         android:background="@color/secondary"
+        android:paddingLeft="20dp"
+        android:paddingVertical="10dp"
+        android:paddingRight="10dp"
         android:layout_height="wrap_content">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:layout_height="wrap_content" android:textSize="20sp" android:text="Today"/>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Do a dish"/>
+        </LinearLayout>
     </RelativeLayout>
 
 </RelativeLayout>
