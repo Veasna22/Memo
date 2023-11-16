@@ -17,12 +17,11 @@ class RegisterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_register, container, false)
-        val btnSignup = view.findViewById<View>(R.id.btn_sign_up)
-        btnSignup.setOnClickListener{
+        _binding = FragmentRegisterBinding.inflate(inflater, container, false)
+        binding.btnSignUp.setOnClickListener{
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
-        return view
+        return binding.root
     }
 
     override fun onDestroyView() {
