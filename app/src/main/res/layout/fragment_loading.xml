@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".LoadingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="105dp"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_mental"
+
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/Niradei_Bold"
+            android:text="@string/Manage_your_Tasks"
+            android:textColor="@color/white"
+            android:layout_marginTop="80dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/Niradei_Regular"
+            android:text="@string/txt_description"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="95dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/Dot1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_dot_1"
+                android:layout_gravity="left"
+                android:layout_marginTop="105dp"
+                android:layout_marginLeft="37dp"
+                ></ImageView>
+            <ImageView
+                android:id="@+id/ellipse"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ellipse_2"
+                android:layout_gravity="left"
+
+                android:layout_marginLeft="23dp"
+                ></ImageView>
+            <ImageView
+                android:id="@+id/ellipse_1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ellipse_2"
+                android:layout_gravity="left"
+
+                android:layout_marginLeft="23dp"
+                ></ImageView>
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:maxWidth="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginBottom="230dp"
+                android:background="@color/primary_purple"
+                android:src="@drawable/right_arrow"></ImageButton>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
