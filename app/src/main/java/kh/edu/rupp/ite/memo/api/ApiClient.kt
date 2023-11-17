@@ -1,9 +1,11 @@
 package kh.edu.rupp.ite.memo.api
 
+import android.provider.ContactsContract.CommonDataKinds.Note
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kh.edu.rupp.ite.memo.models.NoteResponse
 import kh.edu.rupp.ite.memo.utils.Constant.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -26,5 +28,6 @@ class ApiClient {
     fun provideUserAPI(retrofit: Retrofit): UserAPI {
         return retrofit.create(UserAPI::class.java)
     }
+
 
 }
