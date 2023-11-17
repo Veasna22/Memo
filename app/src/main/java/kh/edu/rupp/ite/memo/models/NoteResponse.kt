@@ -1,6 +1,7 @@
 package kh.edu.rupp.ite.memo.models
 
 data class NoteResponse(
-    var content: String,
-    var title: String,
+    val id: String,
+    val content: String,
+    val title: String,
 )
