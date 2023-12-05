@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/Niradei_Bold"
+            android:fontFamily="@font/niradei_bold"
             android:text="@string/Sign_in"
             android:textColor="@color/white"
             android:textSize="24sp" />
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:fontFamily="@font/Niradei_Regular"
+            android:fontFamily="@font/niradei_regular"
             android:text="@string/txt_register_header"
             android:textColor="@color/primary_yellow"
             android:textSize="16sp" />
@@ -46,7 +46,7 @@
             android:layout_height="40dp"
             android:background="@drawable/back_ground"
             android:drawableEnd="@drawable/ic_person"
-            android:fontFamily="@font/Niradei_Regular"
+            android:fontFamily="@font/niradei_regular"
             android:hint="@string/txt_username_hint"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
@@ -62,7 +62,7 @@
             android:layout_marginTop="24dp"
             android:background="@drawable/back_ground"
             android:drawableEnd="@drawable/ic_email"
-            android:fontFamily="@font/Niradei_Regular"
+            android:fontFamily="@font/niradei_regular"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:hint="@string/txt_email_hint"
@@ -78,7 +78,7 @@
             android:layout_marginTop="24dp"
             android:background="@drawable/back_ground"
             android:drawableEnd="@drawable/ic_visible"
-            android:fontFamily="@font/Niradei_Regular"
+            android:fontFamily="@font/niradei_regular"
             android:hint="@string/txt_password_hint"
             android:inputType="textPassword"
             android:paddingLeft="16dp"
@@ -91,12 +91,20 @@
             android:id="@+id/txt_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="dp"
-            android:fontFamily="@font/Niradei_Regular"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/niradei_regular"
             android:text=""
             android:textColor="@color/highlight_text_color"
             android:textSize="12sp" />
-
+        <TextView
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/proxima_nova_it_reg"
+            android:text="@string/txt_already_have_account"
+            android:textSize="14sp" />
         <Button
             android:id="@+id/btn_sign_up"
             style="@style/Widget.Material3.Button"
@@ -104,7 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:fontFamily="@font/Niradei_Bold"
+            android:fontFamily="@font/niradei_bold"
             android:text="@string/txt_sign_in"
 
             android:textColor="@color/primary"
@@ -116,7 +124,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
-            android:fontFamily="@font/Niradei_Semibold"
+            android:fontFamily="@font/niradei_semibold"
             android:text="@string/txt_Or"
             android:textSize="14sp"
             />
@@ -133,7 +141,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
-            android:fontFamily="@font/Niradei_Semibold"
+            android:fontFamily="@font/niradei_semibold"
             android:text="@string/txt_sign_up_with"
             android:textSize="14sp"
             />
@@ -144,7 +152,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/Niradei_Bold"
+            android:fontFamily="@font/niradei_bold"
             android:text="@string/txt_google_login"
 
             android:textColor="@color/primary"
@@ -183,6 +191,16 @@
                 />
         </LinearLayout>
 
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:visibility="gone"
+            android:id="@+id/progress_bar"
+            android:indeterminate="true"
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/black" />
 
 
     </LinearLayout>
