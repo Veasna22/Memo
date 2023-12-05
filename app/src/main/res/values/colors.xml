@@ -15,5 +15,6 @@
     <color name="highlight_text_color">#2196F3</color>
     <color name="dark_grey">#556080</color>
     <color name="yellow">#FFC839</color>
+    <color name="Background">#F6F5EC</color>
 
 </resources>

@@ -6,7 +6,9 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
+    <String name="_Hello sir">Hello! Sir</String>
+    <String name="_projects">Your</String>
+    <String name="_projects(3)">Projects(3)</String>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="txt_no_account_signup">Don\'t have an account?  <font color="#FFC839"> Sign up</font></string>
@@ -28,4 +30,5 @@
     <string name="txt_login_subheader">Login to your account now :)</string>
     <string name="txt_login">Login</string>
     <string name="txt_error_message">%1$S*</string>
+
 </resources>
