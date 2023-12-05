@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/Niradei_Bold1"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_register_header"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:fontFamily="@font/Niradei_Bold1"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_sign_up"
             android:textColor="@color/primary"
             android:textSize="16sp" />
@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/white"
-            android:fontFamily="@font/Niradei_Bold1"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_Or"
             android:textSize="12sp" />
 
@@ -131,7 +131,7 @@
             android:layout_height="14dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/Niradei_Bold1"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_sign_up_with"
             android:textColor="@color/white"
             android:textSize="10sp" />
@@ -142,7 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/Niradei_Bold1"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_google_login"
             android:textColor="@color/primary"
             android:textSize="16sp" />
@@ -160,7 +160,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="12dp"
                 />
-                />
+
 
             <ImageButton
                 android:layout_width="50dp"

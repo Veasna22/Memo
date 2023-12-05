@@ -61,7 +61,7 @@
             android:textColor="@color/black"
             android:text="Your"
             android:textSize="40sp"
-            android:fontFamily="@font/Niradei_Bold1">
+            android:fontFamily="@font/niradei_bold1">
         </TextView>
         <TextView
             android:layout_width="match_parent"
@@ -69,7 +69,7 @@
             android:textSize="40sp"
             android:textColor="@color/black"
             android:text="Projects(3)"
-            android:fontFamily="@font/Niradei_Bold1">
+            android:fontFamily="@font/niradei_bold1">
         </TextView>
     </LinearLayout>
 <!--    <RelativeLayout-->

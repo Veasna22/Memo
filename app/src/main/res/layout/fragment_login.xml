@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/Niradei_Bold1"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_login_header"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -123,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/Niradei_Bold1"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_login"
             android:textColor="@color/primary"
             android:textSize="16sp" />
