@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:fontFamily="@font/Niradei_Bold"
+            android:fontFamily="@font/niradei_bold"
             android:text="@string/Manage_your_Tasks"
             android:textColor="@color/white"
             android:layout_marginTop="80dp"
@@ -37,7 +37,7 @@
             android:layout_width="322dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:fontFamily="@font/Niradei_Regular"
+            android:fontFamily="@font/niradei_regular"
             android:text="@string/txt_description"
             android:textColor="@color/white"
             android:textSize="15sp" />
