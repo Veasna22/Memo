@@ -33,7 +33,7 @@
             <ImageView
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
                 android:background="@drawable/back_ground_fb"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_user"/>
@@ -51,7 +51,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello! Sir"
+            android:text="@string/hello_sir"
             android:textColor="@color/black"
             android:fontFamily="@font/niradei_regular">
         </TextView>
@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="Your"
+            android:text="@string/your"
             android:textSize="40sp"
             android:fontFamily="@font/niradei_bold1">
         </TextView>
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:textSize="40sp"
             android:textColor="@color/black"
-            android:text="Projects(3)"
+            android:text="@string/projects_3"
             android:fontFamily="@font/niradei_bold1">
         </TextView>
     </LinearLayout>

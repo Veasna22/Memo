@@ -30,5 +30,8 @@
     <string name="txt_login_subheader">Login to your account now :)</string>
     <string name="txt_login">Login</string>
     <string name="txt_error_message">%1$S*</string>
+    <string name="hello_sir">Hello! Sir</string>
+    <string name="your">Your</string>
+    <string name="projects_3">Projects(3)</string>
 
 </resources>
