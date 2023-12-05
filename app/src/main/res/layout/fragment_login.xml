@@ -16,7 +16,7 @@
         android:paddingBottom="30dp">
         <ImageView
             android:layout_gravity="center"
-            android:layout_width="200dp"
+            android:layout_width="180dp"
             android:layout_height="110dp"
             android:src="@drawable/ic_memo"
             />
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/proxima_nova_cond_bold"
+            android:fontFamily="@font/Niradei_Bold1"
             android:text="@string/txt_login_header"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -35,7 +35,7 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/proxima_nova_reg"
             android:text="@string/txt_login_subheader"
-            android:textColor="@color/orange"
+            android:textColor="@color/yellow"
             android:textSize="16sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -48,7 +48,7 @@
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:background="@drawable/back_ground"
-                android:fontFamily="@font/proxima_nova_it_reg"
+                android:fontFamily="@font/niradei_regular"
                 android:hint="@string/txt_email_hint"
                 android:drawableEnd="@drawable/ic_email"
                 android:inputType="textEmailAddress"
@@ -67,7 +67,7 @@
                 android:layout_height="40dp"
                 android:background="@drawable/back_ground"
                 android:drawableEnd="@drawable/ic_visible"
-                android:fontFamily="@font/proxima_nova_it_reg"
+                android:fontFamily="@font/niradei_regular"
                 android:hint="@string/txt_password_hint"
                 android:inputType="textPassword"
                 android:paddingLeft="16dp"
@@ -106,10 +106,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/txt_forgot_password"
-                    android:fontFamily="@font/proxima_nova_reg"
-                    android:textColor="@color/orange"
+                    android:fontFamily="@font/niradei_regular"
+                    android:textColor="@color/yellow"
                     android:textSize="14sp"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="12dp"
                     />
             </LinearLayout>
 
@@ -123,9 +123,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/proxima_nova_cond_bold"
+            android:fontFamily="@font/Niradei_Bold1"
             android:text="@string/txt_login"
-            android:textAllCaps="true"
             android:textColor="@color/primary"
             android:textSize="16sp" />
 
@@ -136,7 +135,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
-            android:fontFamily="@font/proxima_nova_reg"
+            android:fontFamily="@font/niradei_regular"
             android:text="@string/txt_no_account_signup"
             android:textSize="14sp" />
 
