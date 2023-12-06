@@ -25,6 +25,12 @@ class AuthViewModel @Inject constructor(private val userRepository: UserRepo ) :
             userRepository.registerUser(userRequest)
         }
     }
+    fun loginUser(userRequest: UserRequest){
+        viewModelScope.launch {
+            userRepository.loginUser(userRequest)
+        }
+    }
+
 
     fun validateCredentials(emailAddress: String, userName: String, password: String,
                             isLogin: Boolean) : Pair<Boolean, String> {

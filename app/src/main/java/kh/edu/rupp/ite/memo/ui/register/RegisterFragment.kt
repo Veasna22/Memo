@@ -13,6 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kh.edu.rupp.ite.memo.R
 import kh.edu.rupp.ite.memo.databinding.FragmentRegisterBinding
 import kh.edu.rupp.ite.memo.models.UserRequest
+import kh.edu.rupp.ite.memo.utils.Helper.Companion.hideKeyboard
 import kh.edu.rupp.ite.memo.utils.NetworkResponse
 import kh.edu.rupp.ite.memo.utils.Token
 import kh.edu.rupp.ite.memo.viewmodel.AuthViewModel
@@ -49,7 +50,7 @@ class RegisterFragment : Fragment() {
             it.findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
         binding.btnSignUp.setOnClickListener {
-//            hideKeyboard(it)
+            hideKeyboard(it)
             val validationResult = validateUserInput()
             if (validationResult.first) {
                 val userRequest = getUserRequest()

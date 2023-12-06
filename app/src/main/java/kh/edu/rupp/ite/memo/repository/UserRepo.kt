@@ -23,6 +23,12 @@ class UserRepo @Inject constructor(private val userAPI: UserAPI) {
         handleResponse(response)
     }
 
+    suspend fun loginUser(userRequest: UserRequest) {
+        _userResponseLiveData.postValue(NetworkResponse.Loading())
+        val response =userAPI.signIn(userRequest)
+        handleResponse(response)
+    }
+
 
     private fun handleResponse(response: Response<UserResponse>) {
         if (response.isSuccessful && response.body() != null) {
