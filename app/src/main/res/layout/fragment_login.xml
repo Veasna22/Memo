@@ -101,6 +101,7 @@
 
                 />
 
+
                 <TextView
                     android:id="@+id/forgot_password_link"
                     android:layout_width="wrap_content"
@@ -113,8 +114,18 @@
                     />
             </LinearLayout>
 
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <TextView
+            android:id="@+id/txt_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/niradei_regular"
+            android:text=""
+            android:textColor="@color/highlight_text_color"
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/btn_login"
@@ -122,7 +133,7 @@
             android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/proxima_nova_cond_bold"
             android:text="@string/txt_login"
             android:textAllCaps="true"
@@ -140,6 +151,16 @@
             android:text="@string/txt_no_account_signup"
             android:textSize="14sp" />
 
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:visibility="gone"
+            android:id="@+id/progress_bar"
+            android:indeterminate="true"
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/white" />
 
     </LinearLayout>
 
