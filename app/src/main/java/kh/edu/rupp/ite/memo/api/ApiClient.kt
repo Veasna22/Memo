@@ -7,6 +7,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kh.edu.rupp.ite.memo.models.NoteResponse
 import kh.edu.rupp.ite.memo.utils.Constant.BASE_URL
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -17,16 +18,32 @@ import javax.inject.Singleton
 class ApiClient {
     @Singleton
     @Provides
-    fun provideRetrofit(): Retrofit {
+    fun provideRetrofit(): Retrofit.Builder {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
+    }
+    @Singleton
+    @Provides
+    fun provideRetrofitAuth(okHttpClient: OkHttpClient): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(okHttpClient)
             .build()
     }
     @Singleton
     @Provides
-    fun provideUserAPI(retrofit: Retrofit): UserAPI {
-        return retrofit.create(UserAPI::class.java)
+    fun provideOkHttpClient(authInterceptor: AuthInterceptor): OkHttpClient {
+        return OkHttpClient.Builder()
+            .addInterceptor(authInterceptor)
+            .build()
+    }
+
+    @Singleton
+    @Provides
+    fun provideUserAPI(retrofitBuilder: Retrofit.Builder): UserAPI {
+        return retrofitBuilder.build().create(UserAPI::class.java)
     }
 
 
