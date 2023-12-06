@@ -17,8 +17,8 @@
 
         <ImageView
             android:layout_gravity="center"
-            android:layout_width="120dp"
-            android:layout_height="90dp"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
             android:src="@drawable/ic_memo"
             />
 
@@ -26,19 +26,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/niradei_bold"
-            android:text="@string/sign_up"
+            android:fontFamily="@font/niradei_bold1"
+            android:text="@string/txt_register_header"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/niradei_regular"
-            android:text="@string/txt_register_header"
-            android:textColor="@color/primary_yellow"
-            android:textSize="16sp" />
+            android:text="@string/txt_register_subheader"
+            android:textColor="@color/yellow"
+            android:textSize="12sp" />
 
         <EditText
             android:id="@+id/txt_username"
@@ -52,8 +52,8 @@
             android:paddingRight="16dp"
             android:textColor="@color/black"
             android:textColorHint="@color/light_gray"
-            android:textSize="15sp"
-            android:layout_marginTop="22dp" />
+            android:textSize="14sp"
+            android:layout_marginTop="24dp" />
 
         <EditText
             android:id="@+id/txt_email"
@@ -69,7 +69,7 @@
             android:inputType="textEmailAddress"
             android:textColor="@color/black"
             android:textColorHint="@color/light_gray"
-            android:textSize="15sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/txt_password"
@@ -85,26 +85,18 @@
             android:paddingRight="16dp"
             android:textColor="@color/black"
             android:textColorHint="@color/light_gray"
-            android:textSize="15sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/txt_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/niradei_regular"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/proxima_nova_it_reg"
             android:text=""
             android:textColor="@color/highlight_text_color"
             android:textSize="12sp" />
-        <TextView
-            android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:fontFamily="@font/proxima_nova_it_reg"
-            android:text="@string/txt_already_have_account"
-            android:textSize="14sp" />
+
         <Button
             android:id="@+id/btn_sign_up"
             style="@style/Widget.Material3.Button"
@@ -112,50 +104,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:fontFamily="@font/niradei_bold"
-            android:text="@string/sign_up"
-
+            android:fontFamily="@font/niradei_bold1"
+            android:text="@string/txt_sign_up"
             android:textColor="@color/primary"
-            android:textSize="18sp" />
-
+            android:textSize="16sp" />
         <TextView
-            android:id="@+id/txt_or"
+            android:id="@+id/btn_login"
+            android:paddingTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
             android:textColor="@color/white"
-            android:fontFamily="@font/niradei_semibold"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_Or"
-            android:textSize="14sp"
-            />
-
-        <com.github.ybq.android.spinkit.SpinKitView
-            android:visibility="gone"
-            android:id="@+id/progress_bar"
-            android:indeterminate="true"
-            style="@style/SpinKitView.ThreeBounce"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:SpinKit_Color="@color/white" />
+            android:textSize="12sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="16dp"
-            android:background="@color/light_gray" />
+            android:background="@color/white" />
+
         <TextView
             android:id="@+id/txt_signup_with"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="14dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/niradei_semibold"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_sign_up_with"
-            android:textSize="14sp"
-            />
+            android:textColor="@color/white"
+            android:textSize="10sp" />
         <Button
             android:id="@+id/btn_google_login"
             style="@style/Widget.Material3.Button"
@@ -163,11 +142,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/niradei_bold"
+            android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_google_login"
-
             android:textColor="@color/primary"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -177,31 +155,21 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_person"
-                android:background="@drawable/back_ground"
+                android:src="@drawable/ic_ig"
+                android:background="@drawable/back_ground_fb"
                 android:layout_gravity="center"
                 android:layout_margin="12dp"
                 />
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_person"
-                android:background="@drawable/back_ground"
-                android:layout_gravity="center"
-                android:layout_margin="12dp"
 
-                />
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_person"
-                android:background="@drawable/back_ground"
-                android:layout_gravity="center"
-                android:layout_margin="12dp"
 
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_facebook"
+                android:background="@drawable/back_ground_fb"
+                android:layout_gravity="center"
                 />
         </LinearLayout>
-
 
 
 
