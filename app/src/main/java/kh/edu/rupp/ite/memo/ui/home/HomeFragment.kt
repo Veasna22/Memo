@@ -1,4 +1,4 @@
-package kh.edu.rupp.ite.onlineshop.api.ui.fragment
+package kh.edu.rupp.ite.memo.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
