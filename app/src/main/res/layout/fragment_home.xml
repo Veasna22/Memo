@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="@string/your"
+            android:text="@string/_projects"
             android:textSize="40sp"
             android:fontFamily="@font/niradei_bold1">
         </TextView>
@@ -68,20 +68,20 @@
             android:layout_height="wrap_content"
             android:textSize="40sp"
             android:textColor="@color/black"
-            android:text="@string/projects_3"
+            android:text="@string/projects"
             android:fontFamily="@font/niradei_bold1">
         </TextView>
     </LinearLayout>
-<!--    <RelativeLayout-->
-<!--        android:layout_below="@id/WelcomeText"-->
-<!--        android:layout_width="match_parent"-->
+    <RelativeLayout
+        android:layout_below="@id/WelcomeText"
+        android:layout_width="match_parent"
 
-<!--        android:background="@color/secondary"-->
-<!--        android:paddingLeft="20dp"-->
-<!--        android:paddingVertical="10dp"-->
-<!--        android:paddingRight="10dp"-->
-<!--        android:layout_height="wrap_content">-->
+        android:background="@color/secondary"
+        android:paddingLeft="20dp"
+        android:paddingVertical="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content">
 
-<!--    </RelativeLayout>-->
+    </RelativeLayout>
 
-<!--</RelativeLayout>-->
+</RelativeLayout>
