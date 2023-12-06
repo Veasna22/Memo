@@ -117,7 +117,7 @@
             android:textColor="@color/white"
             android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_Or"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
         <View
             android:layout_width="match_parent"
