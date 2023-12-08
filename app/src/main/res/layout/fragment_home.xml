@@ -43,15 +43,15 @@
     </LinearLayout>
     <LinearLayout
         android:id="@+id/WelcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingTop="80dp"
-        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello_sir"
+            android:text="@string/hellosir"
             android:textColor="@color/black"
             android:fontFamily="@font/niradei_regular">
         </TextView>
@@ -71,17 +71,22 @@
             android:text="@string/projects_3"
             android:fontFamily="@font/niradei_bold1">
         </TextView>
+
     </LinearLayout>
-<!--    <RelativeLayout-->
-<!--        android:layout_below="@id/WelcomeText"-->
-<!--        android:layout_width="match_parent"-->
+    <LinearLayout
+        android:layout_below="@+id/WelcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="320dp">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:backgroundTint="@color/primary_purple"
+            android:id="@+id/createnoted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:contentDescription="@string/next_screen"
+            android:layout_margin="16dp" />
+    </LinearLayout>
 
-<!--        android:background="@color/secondary"-->
-<!--        android:paddingLeft="20dp"-->
-<!--        android:paddingVertical="10dp"-->
-<!--        android:paddingRight="10dp"-->
-<!--        android:layout_height="wrap_content">-->
-
-<!--    </RelativeLayout>-->
-
-<!--</RelativeLayout>-->
+</RelativeLayout>
