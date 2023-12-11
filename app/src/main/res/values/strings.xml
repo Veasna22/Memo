@@ -40,4 +40,6 @@ effectively manage your time.</string>
     <string name="next_screen">Next_Screen</string>
     <string name="back_buttom">buttom_back</string>
     <string name="more_buttom">More_buttom</string>
+    <string name="status">Status</string>
+    <string name="assigned">Assigned</string>
 </resources>
