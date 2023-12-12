@@ -97,27 +97,48 @@
             android:textColor="@color/highlight_text_color"
             android:textSize="12sp" />
 
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:visibility="gone"
+            android:id="@+id/progress_bar"
+            android:indeterminate="true"
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/white" />
+        <TextView
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/niradei_bold"
+            android:text="@string/txt_already_have_account"
+            android:textSize="15dp" />
         <Button
             android:id="@+id/btn_sign_up"
             style="@style/Widget.Material3.Button"
             android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/niradei_bold1"
             android:text="@string/txt_sign_up"
             android:textColor="@color/primary"
             android:textSize="16sp" />
         <TextView
-            android:id="@+id/btn_login"
-            android:paddingTop="10dp"
+            android:id="@+id/or"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/white"
-            android:fontFamily="@font/niradei_bold1"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/niradei_bold"
             android:text="@string/txt_Or"
-            android:textSize="14sp" />
+
+            android:textSize="15dp" />
 
         <View
             android:layout_width="match_parent"
@@ -128,13 +149,13 @@
         <TextView
             android:id="@+id/txt_signup_with"
             android:layout_width="wrap_content"
-            android:layout_height="14dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/niradei_bold1"
+            android:fontFamily="@font/niradei_bold"
             android:text="@string/txt_sign_up_with"
             android:textColor="@color/white"
-            android:textSize="10sp" />
+            android:textSize="15dp" />
         <Button
             android:id="@+id/btn_google_login"
             style="@style/Widget.Material3.Button"
@@ -170,8 +191,6 @@
                 android:layout_gravity="center"
                 />
         </LinearLayout>
-
-
 
     </LinearLayout>
 

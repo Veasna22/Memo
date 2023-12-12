@@ -6,9 +6,10 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="hellosir">Hello! Sir</string>
+
+    <string name="hello_sir">Hello! Sir</string>
     <string name="_projects">Your</string>
-    <string name="project3">Projects(3)</string>
+    <string name="projects">Projects(3)</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="txt_no_account_signup">Don\'t have an account?  <font color="#FFC839"> Sign up</font></string>
@@ -30,16 +31,7 @@
     <string name="txt_login_subheader">Login to your account now :)</string>
     <string name="txt_login">Login</string>
     <string name="txt_error_message">%1$S*</string>
-    <string name="hello_sir">Hello! Sir</string>
-    <string name="your">Your</string>
-    <string name="projects_3">Projects(3)</string>
-    <string name="_txt_description">With a easy way to use, you can
-effectively manage your time.</string>
-    <string name="first_splashscreen">Manage your Tasks</string>
-    <string name="Create_noted">create_noted</string>
-    <string name="next_screen">Next_Screen</string>
-    <string name="back_buttom">buttom_back</string>
-    <string name="more_buttom">More_buttom</string>
-    <string name="status">Status</string>
-    <string name="assigned">Assigned</string>
+    <string name="managetask">Manage Task</string>
+    <string name="txt_description">Getting more easier for note</string>
+    <string name="txt_already_have_account">Already have an account</string>
 </resources>

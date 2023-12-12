@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:fontFamily="@font/niradei_bold"
-            android:text="@string/first_splashscreen"
+            android:text="@string/managetask"
             android:textColor="@color/white"
             android:layout_marginTop="80dp"
             android:textSize="20sp" />
