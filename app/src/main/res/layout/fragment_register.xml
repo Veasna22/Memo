@@ -137,6 +137,7 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/niradei_bold"
             android:text="@string/txt_Or"
+
             android:textSize="15dp" />
 
         <View

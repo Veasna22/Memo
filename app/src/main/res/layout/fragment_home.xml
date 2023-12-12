@@ -43,15 +43,15 @@
     </LinearLayout>
     <LinearLayout
         android:id="@+id/WelcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingTop="80dp"
-        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello_sir"
+            android:text="@string/hellosir"
             android:textColor="@color/black"
             android:fontFamily="@font/niradei_regular">
         </TextView>
@@ -71,6 +71,7 @@
             android:text="@string/projects"
             android:fontFamily="@font/niradei_bold1">
         </TextView>
+
     </LinearLayout>
     <RelativeLayout
         android:layout_below="@id/WelcomeText"
