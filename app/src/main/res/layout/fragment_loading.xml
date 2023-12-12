@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:fontFamily="@font/niradei_regular"
-            android:text="@string/_txt_description"
+            android:text="@string/txt_description"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end|bottom"
                     android:src="@drawable/ic_right_arrow"
-                    android:contentDescription="@string/next_screen"
+                    android:contentDescription="@string/next"
                     android:layout_margin="16dp" />
             </LinearLayout>
 

@@ -7,7 +7,6 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_sir">Hello! Sir</string>
     <string name="_projects">Your</string>
     <string name="projects">Projects(3)</string>
     <string name="hello_first_fragment">Hello first fragment</string>
@@ -34,4 +33,9 @@
     <string name="managetask">Manage Task</string>
     <string name="txt_description">Getting more easier for note</string>
     <string name="txt_already_have_account">Already have an account</string>
+    <string name="welcome">Hello Sir</string>
+    <string name="back_buttom">Back</string>
+    <string name="more_buttom">More</string>
+    <string name="status">Status</string>
+    <string name="assigned">Assigned</string>
 </resources>
