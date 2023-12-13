@@ -28,6 +28,11 @@ class ApiClient {
     fun provideUserAPI(retrofit: Retrofit): UserAPI {
         return retrofit.create(UserAPI::class.java)
     }
+    @Singleton
+    @Provides
+    fun noteAPI(retrofit: Retrofit): NoteAPI {
+        return retrofit.create(NoteAPI::class.java)
+    }
 
 
 }
