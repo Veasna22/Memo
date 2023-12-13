@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/Background"
     tools:context=".ui.home.HomeFragment">
 
 
@@ -15,8 +15,10 @@
         android:layout_margin="20dp"
         android:layout_height="wrap_content">
 <ImageView
-    android:layout_width="35dp"
-    android:layout_height="35dp" android:src="@drawable/ic_menu"/>
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+   android:layout_gravity="center"
+    android:src="@drawable/ic_menu2"/>
         <LinearLayout
             android:orientation="horizontal"
             android:gravity="right"
@@ -24,40 +26,63 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp" android:src="@drawable/ic_search"/>
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search1"/>
             <ImageView
-                android:background="@color/dark_grey"
-                android:layout_width="35dp"
-                android:layout_marginLeft="10dp"
-                android:layout_height="35dp" android:src="@drawable/ic_profile"/>
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/back_ground_fb"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_user"/>
         </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/WelcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textColor="@color/black"
+            android:fontFamily="@font/niradei_regular">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/_projects"
+            android:textSize="40sp"
+            android:fontFamily="@font/niradei_bold1">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:text="@string/projects"
+            android:fontFamily="@font/niradei_bold1">
+        </TextView>
 
     </LinearLayout>
     <RelativeLayout
-        android:layout_below="@id/header"
+        android:layout_below="@id/WelcomeText"
         android:layout_width="match_parent"
-        android:minHeight="200dp"
+
         android:background="@color/secondary"
         android:paddingLeft="20dp"
         android:paddingVertical="10dp"
         android:paddingRight="10dp"
         android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:fontFamily="@font/proxima_nova_regular"
-        android:layout_height="wrap_content" android:textSize="20sp" android:text="Today"/>
-        <LinearLayout
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <CheckBox
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="Do a dish"/>
-        </LinearLayout>
+
     </RelativeLayout>
 
 </RelativeLayout>
