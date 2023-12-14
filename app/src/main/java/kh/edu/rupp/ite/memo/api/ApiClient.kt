@@ -46,5 +46,10 @@ class ApiClient {
         return retrofitBuilder.build().create(UserAPI::class.java)
     }
 
+    @Singleton
+    @Provides
+    fun providesNoteAPI(retrofitBuilder: Retrofit.Builder, okHttpClient: OkHttpClient): NoteAPI {
+        return retrofitBuilder.client(okHttpClient).build().create(NoteAPI::class.java)
+    }
 
 }
