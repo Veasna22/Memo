@@ -1,44 +1,53 @@
-package kh.edu.rupp.ite.memo.api.ui.adapter
-
+import android.content.res.Configuration
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import kh.edu.rupp.ite.memo.models.NoteResponse
-import java.util.*
+import kh.edu.rupp.ite.memo.R
 import kh.edu.rupp.ite.memo.databinding.ViewHolderNoteBinding
+import kh.edu.rupp.ite.memo.models.NoteResponse
 
+class NoteAdapter(private val onNoteClicked: (NoteResponse) -> Unit) :
+    ListAdapter<NoteResponse, NoteAdapter.NoteViewHolder>(ComparatorDiffUtil()) {
 
-class ProductAdapter : ListAdapter<NoteResponse, ProductAdapter.ProductViewHolder>(
-    object : DiffUtil.ItemCallback<NoteResponse>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
+        val orientation = parent.context.resources.configuration.orientation
+        val layoutRes = if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            R.layout.view_holder_note // Use your horizontal layout resource here
+        } else {
+            R.layout.view_holder_note2 // Use your vertical layout resource here
+        }
+        val binding = ViewHolderNoteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return NoteViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
+        val note = getItem(position)
+        note?.let {
+            holder.bind(it)
+        }
+    }
+
+    inner class NoteViewHolder(private val binding: ViewHolderNoteBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(note: NoteResponse) {
+            binding.title.text = note.title
+            binding.desc.text = note.description
+            binding.root.setOnClickListener {
+                onNoteClicked(note)
+            }
+        }
+    }
+
+    class ComparatorDiffUtil : DiffUtil.ItemCallback<NoteResponse>() {
         override fun areItemsTheSame(oldItem: NoteResponse, newItem: NoteResponse): Boolean {
-            return oldItem == newItem
+            return oldItem._id == newItem._id
         }
 
         override fun areContentsTheSame(oldItem: NoteResponse, newItem: NoteResponse): Boolean {
-            return Objects.equals(oldItem.id, newItem.id)
-        }
-    }
-) {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = ViewHolderNoteBinding.inflate(layoutInflater, parent, false)
-        return ProductViewHolder(binding)
-    }
-
-    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        val item = getItem(position)
-        holder.bind(item)
-    }
-
-    class ProductViewHolder(private val itemBinding: ViewHolderNoteBinding) :
-        RecyclerView.ViewHolder(itemBinding.root) {
-
-        fun bind(note: NoteResponse) {
-            itemBinding.txtTitle.text = note.title;
-            itemBinding.txtContent.text = note.content
+            return oldItem == newItem
         }
     }
 }

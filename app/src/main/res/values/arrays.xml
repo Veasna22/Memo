@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="layout_options">
+        <item>Vertical</item>
+        <item>Horizontal</item>
+    </string-array>
+</resources>
