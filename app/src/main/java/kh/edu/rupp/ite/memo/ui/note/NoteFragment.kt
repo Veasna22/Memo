@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -60,8 +61,8 @@ class NoteFragment : Fragment() {
     }
 
     private fun bindHandlers() {
-        binding.btnDelete.setOnClickListener {
-            note?.let { noteViewModel.deleteNote(it!!._id) }
+        binding.more.setOnClickListener {
+            showPopupMenu(it)
         }
         binding.apply {
             btnSubmit.setOnClickListener {
@@ -89,11 +90,22 @@ class NoteFragment : Fragment() {
                 binding.txtDescription.setText(it.description)
             }
         }
-        else{
-//            binding.addEditText.text = resources.getString(R.string.add_note)
-        }
     }
-
+    private fun showPopupMenu(view: View) {
+        val popupMenu = PopupMenu(requireContext(), view)
+        popupMenu.inflate(R.menu.delete_note_menu) // Inflate the menu resource
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.delete_note -> {
+                    // Perform delete operation here
+                    note?.let { noteViewModel.deleteNote(it._id) }
+                    true
+                }
+                else -> false
+            }
+        }
+        popupMenu.show()
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
