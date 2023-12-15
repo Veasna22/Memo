@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.core.view.isVisible
@@ -49,13 +47,14 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView(2) // Default layout
         setupDropdown()
-
+        val titleTextView = binding.textView
         noteViewModel.getAllNotes()
         binding.addNote.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_noteFragment)
         }
         bindObservers()
     }
+
     private fun setupDropdown() {
         binding.dropdownButton.setOnClickListener {
             showDropdownMenu()
@@ -95,6 +94,9 @@ class HomeFragment : Fragment() {
             binding.progressBar.isVisible = false
             when (it) {
                 is NetworkResponse.Success -> {
+                    val noteCount = it.data?.size ?: 0
+                    val title = "Project ($noteCount)"
+                    binding.textView.text = title
                     adapter.submitList(it.data)
                 }
                 is NetworkResponse.Error -> {
