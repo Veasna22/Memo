@@ -37,17 +37,20 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        adapter = NoteAdapter(::onNoteClicked)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         setupRecyclerView(2) // Default layout
         setupDropdown()
-        val titleTextView = binding.textView
+
+        val titleTextView = binding.textView1
         noteViewModel.getAllNotes()
         binding.addNote.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_noteFragment)
@@ -59,6 +62,7 @@ class HomeFragment : Fragment() {
         binding.dropdownButton.setOnClickListener {
             showDropdownMenu()
         }
+
     }
 
     private fun showDropdownMenu() {
@@ -80,6 +84,7 @@ class HomeFragment : Fragment() {
     }
 
 
+
     private fun setupRecyclerView(spanCount: Int, orientation: Int = RecyclerView.VERTICAL) {
         layoutManager = if (orientation == RecyclerView.HORIZONTAL) {
             LinearLayoutManager(requireContext(), orientation, false)
@@ -95,8 +100,8 @@ class HomeFragment : Fragment() {
             when (it) {
                 is NetworkResponse.Success -> {
                     val noteCount = it.data?.size ?: 0
-                    val title = "Project ($noteCount)"
-                    binding.textView.text = title
+                    val title = "Your task ($noteCount)"
+                    binding.textView1.text = title
                     adapter.submitList(it.data)
                 }
                 is NetworkResponse.Error -> {

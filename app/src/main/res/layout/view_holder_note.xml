@@ -1,17 +1,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="180dp"
     android:layout_margin="8dp"
-    android:background="@drawable/note_background"
+    android:background="@drawable/ic_bg"
     android:orientation="vertical"
     android:padding="16dp">
-
+    <ImageView
+        android:id="@+id/menuButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_more1"
+        android:contentDescription="@string/delete_buttom" />
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/niradei_bold1"
-        android:text="Which phone should I buy?"
+        android:text="@string/which_phone_should_i_buy"
         android:textColor="#000"
         android:textSize="18sp" />
 
@@ -21,8 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/niradei_regular"
-        android:text="I need to buy a new phone. I am confused between iPhone 11 and Samsung Galaxy S10. Which one should I buy?"
+        android:text="@string/i_need_to_buy_a_new_phone_i_am_confused_between_iphone_11_and_samsung_galaxy_s10_which_one_should_i_buy"
         android:textColor="#000"
         android:textSize="13sp" />
+
 
 </LinearLayout>

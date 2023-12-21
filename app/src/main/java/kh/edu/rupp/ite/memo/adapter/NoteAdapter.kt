@@ -1,3 +1,4 @@
+
 import android.content.res.Configuration
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,15 +9,16 @@ import kh.edu.rupp.ite.memo.R
 import kh.edu.rupp.ite.memo.databinding.ViewHolderNoteBinding
 import kh.edu.rupp.ite.memo.models.NoteResponse
 
-class NoteAdapter(private val onNoteClicked: (NoteResponse) -> Unit) :
+class NoteAdapter(
+    private val onNoteClicked: (NoteResponse) -> Unit) :
     ListAdapter<NoteResponse, NoteAdapter.NoteViewHolder>(ComparatorDiffUtil()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val orientation = parent.context.resources.configuration.orientation
         val layoutRes = if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            R.layout.view_holder_note // Use your horizontal layout resource here
+            R.layout.view_holder_note // For Horizontal layout
         } else {
-            R.layout.view_holder_note2 // Use your vertical layout resource here
+            R.layout.view_holder_note2 // For Vertical Layout
         }
         val binding = ViewHolderNoteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return NoteViewHolder(binding)
