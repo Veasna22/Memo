@@ -1,17 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="200dp"
     android:layout_margin="8dp"
     android:background="@drawable/ic_bg"
     android:orientation="vertical"
     android:padding="16dp">
-    <ImageView
+    <ImageButton
         android:id="@+id/menuButton"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_gravity="end"
         android:src="@drawable/ic_more1"
-        android:contentDescription="@string/delete_buttom" />
+        android:contentDescription="@string/delete_buttom1" />
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
