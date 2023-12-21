@@ -78,6 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView1"
         app:layout_constraintVertical_bias="1.0"
         tools:listitem="@layout/view_holder_note" />
+
     <com.github.ybq.android.spinkit.SpinKitView
         android:visibility="gone"
         android:id="@+id/progress_bar"
