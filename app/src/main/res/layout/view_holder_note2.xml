@@ -5,13 +5,13 @@
     android:background="@drawable/ic_bg"
     android:orientation="horizontal"
     android:padding="16dp">
-    <ImageButton
-        android:id="@+id/menuButton"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_gravity="end"
-        android:src="@drawable/ic_more1"
-        android:contentDescription="@string/delete_buttom1" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/menuButton"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:src="@drawable/ic_more1"-->
+<!--        android:contentDescription="@string/delete_buttom1" />-->
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
