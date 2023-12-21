@@ -52,20 +52,19 @@
 
 
     </LinearLayout>
-
     <TextView
         android:textColor="@color/black"
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/niradei_bold1"
-        android:text="@string/projects"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header"
-         />
+        />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/note_list"
@@ -74,8 +73,10 @@
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toTopOf="@+id/add_note"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintVertical_bias="1.0"
         tools:listitem="@layout/view_holder_note" />
     <com.github.ybq.android.spinkit.SpinKitView
         android:visibility="gone"

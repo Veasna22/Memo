@@ -94,17 +94,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout"
         />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginTop="75dp"
+       android:layout_marginStart="200dp"
+       android:focusableInTouchMode="true"
+       >
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/input_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="5dp"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+           >
+           <AutoCompleteTextView
+               android:id="@+id/dropdown_menu"
+               android:layout_width="180dp"
+               android:layout_height="50dp"
+               android:inputType="none"
+               android:elevation="0dp"
+               android:labelFor="@id/statustext"
+               android:text="@string/not_started"
+               >
 
-<!--    <ImageView-->
-<!--        android:id="@+id/btn_delete"-->
-<!--        android:layout_width="32dp"-->
-<!--        android:layout_height="32dp"-->
-<!--        android:layout_marginTop="27dp"-->
-<!--        android:layout_marginRight="16dp"-->
-<!--        android:src="@drawable/ic_delete"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/add_edit_text"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/linearLayout"-->
-<!--        app:tint="@color/primary" />-->
+           </AutoCompleteTextView>
+       </com.google.android.material.textfield.TextInputLayout>
+   </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/btn_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintEnd_toEndOf="@+id/add_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        android:importantForAccessibility="no" />
 
     <TextView
         android:id="@+id/statustext"
@@ -114,7 +142,7 @@
         android:drawablePadding="8dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:textColor="@color/primary"
         android:textSize="16sp"
         android:fontFamily="@font/niradei_semibold"

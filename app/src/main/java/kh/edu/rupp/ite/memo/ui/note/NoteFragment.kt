@@ -4,6 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import android.widget.Toast
 import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -27,6 +31,7 @@ class NoteFragment : Fragment() {
     private val noteViewModel by viewModels<NoteViewModel>()
     private var note: NoteResponse? = null
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,11 +41,20 @@ class NoteFragment : Fragment() {
 
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setInitialData()
         bindHandlers()
         bindObservers()
+        val items = listOf("Not Started", "In Progress", "Done")
+        val autocomplete: AutoCompleteTextView = binding.dropdownMenu
+        val adapter =ArrayAdapter(requireContext(), R.layout.list_item, items)
+        autocomplete.setAdapter(adapter)
+        autocomplete.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
+            val itemSelected = adapterView.getItemAtPosition(i)
+            Toast.makeText(requireContext(), "Item: $itemSelected", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
