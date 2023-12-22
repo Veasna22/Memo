@@ -100,7 +100,7 @@ class HomeFragment : Fragment() {
             when (it) {
                 is NetworkResponse.Success -> {
                     val noteCount = it.data?.size ?: 0
-                    val title = "Your task ($noteCount)"
+                    val title = if (noteCount > 1) "Your notes" + " ($noteCount)" else  "Your note" + " ($noteCount)"
                     binding.textView1.text = title
                     adapter.submitList(it.data)
                 }
