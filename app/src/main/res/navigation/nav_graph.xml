@@ -13,8 +13,8 @@
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_registerFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_registerFragment_to_onboading_1_Fragment"
+            app:destination="@id/onboading_1_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -22,10 +22,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment"
-            app:popUpTo="@id/registerFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_loginFragment_to_onboading_1_Fragment"
+            app:destination="@id/onboading_1_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -46,8 +44,30 @@
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/loadingFragment"
-        android:name="kh.edu.rupp.ite.memo.ui.loading.LoadingFragment"
-        android:label="fragment_loading"
-        tools:layout="@layout/fragment_onboarding_one" />
+        android:id="@+id/onboading_1_Fragment"
+        android:name="kh.edu.rupp.ite.memo.ui.loading.Onboading_2_Fragment"
+        android:label="fragment_onboading_1_"
+        tools:layout="@layout/fragment_onboading_1_" >
+        <action
+            android:id="@+id/action_onboading_1_Fragment_to_onboading_2_Fragment2"
+            app:destination="@id/onboading_2_Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboading_3_Fragment"
+        android:name="kh.edu.rupp.ite.memo.ui.loading.Onboading_3_Fragment"
+        android:label="fragment_onboading_3_"
+        tools:layout="@layout/fragment_onboading_3_" >
+        <action
+            android:id="@+id/action_onboading_3_Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboading_2_Fragment2"
+        android:name="kh.edu.rupp.ite.memo.ui.loading.Onboading_2_Fragment"
+        android:label="fragment_onboading_2_"
+        tools:layout="@layout/fragment_onboading_2_" >
+        <action
+            android:id="@+id/action_onboading_2_Fragment2_to_onboading_3_Fragment"
+            app:destination="@id/onboading_3_Fragment" />
+    </fragment>
 </navigation>

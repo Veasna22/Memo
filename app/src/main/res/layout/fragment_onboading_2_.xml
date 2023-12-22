@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/primary"
-    tools:context=".ui.loading.LoadingFragment">
+    tools:context=".ui.loading.Onboading_2_Fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -80,7 +80,7 @@
                 >
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:backgroundTint="@color/white"
-                    android:id="@+id/next_screen"
+                    android:id="@+id/next_screen2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end|bottom"
