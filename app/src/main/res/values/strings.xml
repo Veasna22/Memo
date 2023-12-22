@@ -56,6 +56,9 @@
     <string name="delete_buttom1">Delete_buttom</string>
     <string name="set_your_goals">Set your goals</string>
     <string name="record_all_your_best_ideas">Record all your best ideas in our best notes.</string>
+    <string name="welcome_to_memo">Welcome to Memo.</string>
+    <string name="enjoys_doing_your_tasks">Enjoys! doing your tasks.</string>
+
 
 
 </resources>
