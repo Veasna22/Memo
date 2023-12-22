@@ -49,5 +49,5 @@
         android:id="@+id/loadingFragment"
         android:name="kh.edu.rupp.ite.memo.ui.loading.LoadingFragment"
         android:label="fragment_loading"
-        tools:layout="@layout/fragment_loading" />
+        tools:layout="@layout/fragment_onboarding_one" />
 </navigation>

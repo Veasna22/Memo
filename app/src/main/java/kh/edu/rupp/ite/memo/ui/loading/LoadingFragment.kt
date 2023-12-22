@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
-import kh.edu.rupp.ite.memo.databinding.FragmentLoadingBinding
+import kh.edu.rupp.ite.memo.databinding.FragmentOnboardingOneBinding
 
 @AndroidEntryPoint
 class LoadingFragment : Fragment() {
 
-    private var _binding: FragmentLoadingBinding? = null
+    private var _binding: FragmentOnboardingOneBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +19,7 @@ class LoadingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentLoadingBinding.inflate(inflater, container, false)
+        _binding = FragmentOnboardingOneBinding.inflate(inflater, container, false)
         return binding.root
     }
 //
