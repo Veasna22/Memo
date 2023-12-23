@@ -38,7 +38,7 @@ class RegisterFragment : Fragment() {
 
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
         if (token.getToken() != null) {
-            findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
+            findNavController().navigate(R.id.action_registerFragment_to_onboading_1_Fragment)
         }
         return binding.root
 
@@ -90,7 +90,7 @@ class RegisterFragment : Fragment() {
             when (it) {
                 is NetworkResponse.Success -> {
                     token.saveToken(it.data!!.token)
-                    findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_registerFragment_to_onboading_1_Fragment)
                 }
                 is NetworkResponse.Error -> {
                     showValidationErrors(it.message.toString())
