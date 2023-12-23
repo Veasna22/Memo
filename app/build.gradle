@@ -77,5 +77,6 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
 
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation "io.noties.markwon:core:4.2.2"
 
 }
