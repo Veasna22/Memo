@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/primary"
-    tools:context=".ui.loading.Onboading_3_Fragment">
+    tools:context=".ui.loading.OnBoardThree">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout

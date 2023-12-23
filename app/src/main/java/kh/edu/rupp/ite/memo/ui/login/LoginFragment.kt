@@ -81,7 +81,7 @@ class LoginFragment : Fragment() {
             when (it) {
                 is NetworkResponse.Success -> {
                     token.saveToken(it.data!!.token)
-                    findNavController().navigate(R.id.action_loginFragment_to_onboading_1_Fragment)
+                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                 }
                 is NetworkResponse.Error -> {
                     showValidationErrors(it.message.toString())

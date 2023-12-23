@@ -1,19 +1,19 @@
 package kh.edu.rupp.ite.memo.ui.loading
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kh.edu.rupp.ite.memo.R
-import kh.edu.rupp.ite.memo.databinding.FragmentOnboading1Binding
+import kh.edu.rupp.ite.memo.databinding.FragmentOnBoardTwoBinding
 
 @AndroidEntryPoint
-class Onboading_1_Fragment : Fragment() {
+class OnBoardTwo : Fragment() {
 
-    private var _binding: FragmentOnboading1Binding? = null
+    private var _binding: FragmentOnBoardTwoBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -21,17 +21,16 @@ class Onboading_1_Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentOnboading1Binding.inflate(inflater, container, false)
+        _binding = FragmentOnBoardTwoBinding.inflate(inflater, container, false)
         return binding.root
     }
-    //
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding.nextScreen.setOnClickListener {
+        binding.nextScreen2.setOnClickListener {
 
-            it.findNavController().navigate(R.id.action_onboading_1_Fragment_to_onboading_2_Fragment2)
+            it.findNavController().navigate(R.id.action_onBoardTwo_to_onBoardThree)
         }
 
 

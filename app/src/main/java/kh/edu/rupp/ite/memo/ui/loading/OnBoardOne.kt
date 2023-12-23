@@ -8,14 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kh.edu.rupp.ite.memo.R
-
-import kh.edu.rupp.ite.memo.databinding.FragmentOnboading3Binding
-
-
+import kh.edu.rupp.ite.memo.databinding.FragmentOnBoardOneBinding
 @AndroidEntryPoint
-class Onboading_3_Fragment : Fragment() {
 
-    private var _binding: FragmentOnboading3Binding? = null
+class OnBoardOne : Fragment() {
+
+    private var _binding: FragmentOnBoardOneBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -23,17 +21,16 @@ class Onboading_3_Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentOnboading3Binding.inflate(inflater, container, false)
+        _binding = FragmentOnBoardOneBinding.inflate(inflater, container, false)
         return binding.root
     }
-    //
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding.nextScreen3.setOnClickListener {
+        binding.nextScreen.setOnClickListener {
 
-            it.findNavController().navigate(R.id.action_onboading_3_Fragment_to_homeFragment)
+            it.findNavController().navigate(R.id.action_onBoardOne_to_onBoardTwo)
         }
 
 
