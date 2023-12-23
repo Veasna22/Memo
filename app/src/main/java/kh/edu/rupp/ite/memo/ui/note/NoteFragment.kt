@@ -1,13 +1,10 @@
 package kh.edu.rupp.ite.memo.ui.note
 
 import android.os.Bundle
+import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.Toast
 import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -16,12 +13,15 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
+import io.noties.markwon.Markwon
 import kh.edu.rupp.ite.memo.R
 import kh.edu.rupp.ite.memo.databinding.FragmentNoteBinding
 import kh.edu.rupp.ite.memo.models.NoteRequest
 import kh.edu.rupp.ite.memo.models.NoteResponse
 import kh.edu.rupp.ite.memo.utils.NetworkResponse
 import kh.edu.rupp.ite.memo.viewmodel.NoteViewModel
+import java.text.SimpleDateFormat
+import java.util.*
 
 @AndroidEntryPoint
 class NoteFragment : Fragment() {
@@ -47,15 +47,6 @@ class NoteFragment : Fragment() {
         setInitialData()
         bindHandlers()
         bindObservers()
-        val items = listOf("Not Started", "In Progress", "Done")
-        val autocomplete: AutoCompleteTextView = binding.dropdownMenu
-        val adapter =ArrayAdapter(requireContext(), R.layout.list_item, items)
-        autocomplete.setAdapter(adapter)
-        autocomplete.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
-            val itemSelected = adapterView.getItemAtPosition(i)
-            Toast.makeText(requireContext(), "Item: $itemSelected", Toast.LENGTH_SHORT).show()
-        }
-
     }
 
     private fun bindObservers() {
@@ -98,10 +89,29 @@ class NoteFragment : Fragment() {
     private fun setInitialData() {
         val jsonNote = arguments?.getString("note")
         if (jsonNote != null) {
-            note = Gson().fromJson<NoteResponse>(jsonNote, NoteResponse::class.java)
+            note = Gson().fromJson(jsonNote, NoteResponse::class.java)
             note?.let {
                 binding.txtTitle.setText(it.title)
-                binding.txtDescription.setText(it.description)
+
+                val markdown = it.description
+
+                val markwon = Markwon.create(requireContext())
+                val markdownSpanned = markwon.toMarkdown(markdown ?: "")
+
+                binding.txtDescription.text = markdownSpanned as Editable?
+
+                val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault()) // Modify this based on your timestamp format
+                val outputFormat = SimpleDateFormat("yyyy / MM / dd", Locale.getDefault())
+                try {
+                    val parsedDate = inputFormat.parse(it.createdAt)
+                    val parsedDateUpdate = inputFormat.parse(it.updatedAt)
+                    val formattedDate = parsedDate?.let { it1 -> outputFormat.format(it1) }
+                    val formattedUpdateDate = parsedDateUpdate?.let { it1 -> outputFormat.format(it1) }
+                    binding.statustext.text = formattedDate
+                    binding.addEditText.text = formattedUpdateDate
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
             }
         }
     }

@@ -82,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/niradei_semibold"
         android:text="@string/status"
@@ -101,33 +101,33 @@
        android:layout_marginStart="200dp"
        android:focusableInTouchMode="true"
        >
-       <com.google.android.material.textfield.TextInputLayout
-           android:id="@+id/input_text"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_margin="5dp"
-           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-           >
-           <AutoCompleteTextView
-               android:id="@+id/dropdown_menu"
-               android:layout_width="180dp"
-               android:layout_height="50dp"
-               android:inputType="none"
-               android:elevation="0dp"
-               android:labelFor="@id/statustext"
-               android:text="@string/not_started"
-               >
+<!--       <com.google.android.material.textfield.TextInputLayout-->
+<!--           android:id="@+id/input_text"-->
+<!--           android:layout_width="wrap_content"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:layout_margin="5dp"-->
+<!--           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--           >-->
+<!--           <AutoCompleteTextView-->
+<!--               android:id="@+id/dropdown_menu"-->
+<!--               android:layout_width="180dp"-->
+<!--               android:layout_height="50dp"-->
+<!--               android:inputType="none"-->
+<!--               android:elevation="0dp"-->
+<!--               android:labelFor="@id/statustext"-->
+<!--               android:text="@string/not_started"-->
+<!--               >-->
 
-           </AutoCompleteTextView>
-       </com.google.android.material.textfield.TextInputLayout>
+<!--           </AutoCompleteTextView>-->
+<!--       </com.google.android.material.textfield.TextInputLayout>-->
    </LinearLayout>
 
 
     <ImageView
         android:id="@+id/btn_delete"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="24dp"
         android:src="@drawable/ic_user"
         app:layout_constraintEnd_toEndOf="@+id/add_edit_text"
@@ -202,22 +202,37 @@
             android:textColor="@color/black"
             android:textSize="12sp" />
 
-        <EditText
-            android:id="@+id/txt_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/niradei_regular"
-            android:gravity="top|start"
-            android:hint="@string/txt_desc_hint"
-            android:inputType="textMultiLine"
-            android:lines="10"
-            android:scrollbars="vertical"
-            android:scrollHorizontally="false"
-            android:textColor="@color/black"
-            android:textColorHint="@color/light_gray"
-            android:textSize="16sp" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/niradei_regular"
+                    android:gravity="top|start"
+                    android:hint="@string/txt_desc_hint"
+                    android:inputType="textMultiLine"
+                    android:lines="10"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/light_gray"
+                    android:textSize="16sp" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/noteTextView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:textSize="16sp" />-->
+
+
+            </ScrollView>
+
 
         <View
             android:layout_width="match_parent"
@@ -230,7 +245,7 @@
             style="@style/Widget.Material3.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="35dp"
             android:backgroundTint="@color/primary"
             android:fontFamily="@font/niradei_bold1"
             android:text="@string/submit"
