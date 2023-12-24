@@ -38,7 +38,7 @@ class RegisterFragment : Fragment() {
 
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
         if (token.getToken() != null) {
-            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+            findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
         }
         return binding.root
 
@@ -47,7 +47,7 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnLogin.setOnClickListener {
-            it.findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+            it.findNavController().navigate(R.id.action_registerFragment_to_loginFragment3)
         }
         binding.btnSignUp.setOnClickListener {
             hideKeyboard(it)
@@ -90,7 +90,7 @@ class RegisterFragment : Fragment() {
             when (it) {
                 is NetworkResponse.Success -> {
                     token.saveToken(it.data!!.token)
-                    findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+                    findNavController().navigate(R.id.action_registerFragment_to_onBoardOne)
                 }
                 is NetworkResponse.Error -> {
                     showValidationErrors(it.message.toString())
