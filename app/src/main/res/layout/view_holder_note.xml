@@ -28,7 +28,7 @@
         android:fontFamily="@font/niradei_bold1"
         android:text="@string/which_phone_should_i_buy"
         android:textColor="#000"
-        android:textSize="18sp" />
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/desc"
