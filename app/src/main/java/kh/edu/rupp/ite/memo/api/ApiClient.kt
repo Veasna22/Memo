@@ -1,11 +1,9 @@
 package kh.edu.rupp.ite.memo.api
 
-import android.provider.ContactsContract.CommonDataKinds.Note
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import kh.edu.rupp.ite.memo.models.NoteResponse
 import kh.edu.rupp.ite.memo.utils.Constant.BASE_URL
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
