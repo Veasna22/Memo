@@ -50,7 +50,6 @@ class HomeFragment : Fragment() {
         setupRecyclerView(2) // Default layout
         setupDropdown()
 
-        val titleTextView = binding.textView1
         noteViewModel.getAllNotes()
         binding.addNote.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_noteFragment)
